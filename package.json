@@ -1,6 +1,6 @@
 {
   "name": "simple-backuper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple backup tool with encryption support",
   "main": "dist/index.js",
   "bin": "dist/index.js",
