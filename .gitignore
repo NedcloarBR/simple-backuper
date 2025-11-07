@@ -15,4 +15,33 @@ node_modules
 
 #!.yarn/cache
 .pnp.*
+
+# Config file
 config.json
+
+# Build outputs
+dist/
+build/
+*.exe
+*.app
+*.deb
+*.rpm
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

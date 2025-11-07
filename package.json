@@ -2,21 +2,41 @@
   "name": "simple-backuper",
   "version": "0.0.1",
   "description": "A simple backup tool with encryption support",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "packageManager": "yarn@4.11.0",
   "scripts": {
-    "dev": "tsx --watch src/index.ts"
+    "dev": "tsx --watch src/index.ts",
+    "build": "rimraf dist && tsc",
+    "build:binaries": "yarn build && yarn pkg:all",
+    "pkg:all": "yarn pkg:win && yarn pkg:linux && yarn pkg:macos",
+    "pkg:win": "pkg dist/index.js --target node18-win-x64 --output build/simple-backuper-win.exe",
+    "pkg:linux": "pkg dist/index.js --target node18-linux-x64 --output build/simple-backuper-linux",
+    "pkg:macos": "pkg dist/index.js --target node18-macos-x64 --output build/simple-backuper-macos",
+    "clean": "rimraf dist build",
+    "release": "yarn clean && yarn build:binaries",
+    "release:patch": "node scripts/release.js patch",
+    "release:minor": "node scripts/release.js minor",
+    "release:major": "node scripts/release.js major"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ],
+    "outputPath": "build"
   },
   "dependencies": {
     "@types/prompts": "^2.4.9",
     "archiver": "^7.0.1",
     "archiver-zip-encrypted": "^2.0.0",
     "chalk": "^4.1.2",
-    "ora": "^9.0.0",
+    "ora": "5.4.1",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@types/archiver": "^7.0.0",
     "@types/node": "^22.10.2",
+    "@yao-pkg/pkg": "^6.10.1",
     "cross-env": "^10.1.0",
     "rimraf": "^6.1.0",
     "tsx": "^4.19.2",

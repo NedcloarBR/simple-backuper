@@ -15,19 +15,65 @@ An interactive CLI tool for creating compressed backups with encryption support.
 
 ## 📋 Prerequisites
 
-- Node.js 16+ or higher
+### For Binary Users
+- No prerequisites needed! Just download and run.
+
+### For Developers
+- Node.js 18+ or higher
 - Yarn 4.11.0 or higher
 
 ## 🛠️ Installation
 
+### Option 1: Download Pre-built Binary (Recommended)
+
+1. Go to the [Releases page](https://github.com/NedcloarBR/simple-backuper/releases/latest)
+2. Download the binary for your platform:
+   - Windows: `simple-backuper-win.exe`
+   - Linux: `simple-backuper-linux`
+   - macOS: `simple-backuper-macos`
+3. Make it executable (Linux/macOS only):
+   ```bash
+   chmod +x simple-backuper-linux
+   ```
+4. Run it:
+   ```bash
+   # Windows
+   simple-backuper-win.exe
+   
+   # Linux/macOS
+   ./simple-backuper-linux
+   ```
+
+### Option 2: Install from Source
+
 ```bash
 # Clone the repository
-git clone <your-repository>
+git clone https://github.com/NedcloarBR/simple-backuper
 cd simple-backuper
 
 # Install dependencies
 yarn install
+
+# Run in development mode
+yarn dev
 ```
+
+### Option 3: Build Your Own Binary
+
+```bash
+# Install dependencies
+yarn install
+
+# Build binaries for all platforms
+yarn release
+
+# Or build for specific platform
+yarn pkg:win    # Windows
+yarn pkg:linux  # Linux
+yarn pkg:macos  # macOS
+```
+
+See [BUILD_RELEASE.md](BUILD_RELEASE.md) for detailed build instructions.
 
 ## 🎮 Usage
 
