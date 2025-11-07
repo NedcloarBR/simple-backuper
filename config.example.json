@@ -1,10 +1,15 @@
 [
   {
-    "zipName": "teste",
+    "zipName": "important-documents",
+    "outputDir": "D:\\Backups",
     "paths": [
-      "./**/*.ts",
-      "./**/*.tsx"
+      "C:\\Users\\user\\Documents",
+      "C:\\Users\\user\\Pictures"
     ],
-    "password": "123"
+    "zipOptions": {
+      "password": "secure-password",
+      "encryptionMethod": "zip20",
+      "compressLevel": 9
+    }
   }
 ]
