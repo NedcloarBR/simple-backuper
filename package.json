@@ -1,0 +1,25 @@
+{
+  "name": "simple-backuper",
+  "version": "0.0.1",
+  "description": "A simple backup tool with encryption support",
+  "packageManager": "yarn@4.11.0",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts"
+  },
+  "dependencies": {
+    "@types/prompts": "^2.4.9",
+    "archiver": "^7.0.1",
+    "archiver-zip-encrypted": "^2.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^9.0.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/archiver": "^7.0.0",
+    "@types/node": "^22.10.2",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  }
+}

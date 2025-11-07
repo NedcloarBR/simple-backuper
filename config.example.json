@@ -1,0 +1,10 @@
+[
+  {
+    "zipName": "teste",
+    "paths": [
+      "./**/*.ts",
+      "./**/*.tsx"
+    ],
+    "password": "123"
+  }
+]
